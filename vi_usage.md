@@ -1,8 +1,6 @@
 
 
-Scrolling
-Keys | Description | Example
---
+##Scrolling
 Keys     | Description | Example   
 :--- | :--- | :---
 [control] + e | Scroll down one line ("expose") | TBA    
