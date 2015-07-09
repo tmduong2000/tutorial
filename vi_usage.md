@@ -19,6 +19,14 @@ fc | Move forward to c | Fc | Move backward to c
 H | top of screen | L | botton of screen
 M | middle of screen | |
 % | Move to associated (), {}, []
+
+
+###Scrolling
+Keys     | Description | Keys | Description   
+:--- | :--- | :--- | :--- | :---
+^e | scroll down one line ("expose") | ^y | scroll up one line
+^d | scroll down half screen | ^u | scroll down one screen
+^f | scroll down one screen ("forward") | ^b | scroll up one screen
 zz | center cursor line in window
 zh | scroll left | zl | scroll right
 zt | scroll top | zb | scroll bottom
@@ -66,10 +74,21 @@ Keys     | Description | Keys | Description
 :bnext (:bn) | go to next buff | :bprev (:bp) | go to prev buff
 :bd | delete a buffer (close a file) | :bd! | force close
 :sp fname | open file in new buff and split window | :vsp fname | open a file in new buff and V-Split
-Ctrl + ws | split windows | Ctrl + wv | vertical split window
-Ctrl + wq | quit windows | Ctrl + ww | split window
-Ctrl + wh | move cursor to L-Win (V-Split) | Ctrl + wl | move cursor to R-W (V-Split)
-Ctrl + wj | move cursor to Win below (H-Split) | Ctrl + wk | move cursor to win above (H-Split)
+^ws | split windows | ^wv | vertical split window
+^wq | quit windows | ^ww | split window
+^wh | move cursor to L-Win (V-Split) | ^wl | move cursor to R-W (V-Split)
+^wj | move cursor to Win below (H-Split) | ^wk | move cursor to win above (H-Split)
+
+###MISC
+Keys     | Description | Keys | Description   
+:--- | :--- | :--- | :--- | :---
+:.= | display curr line | := | display total lines
+:!cmd | exec Unix cmd | r!cmd | insert output from Unix cmd into file after cursor
+:sh | startup a shell enter cmd
+:r fn | read file 
+:w | write to file | :w newF | write current content to new file
+:12,35w newF | write line 12-35 to new file | :w! prevF | write content over a pre-existing file
+:w>> otherF | append text to other File
 
 
 ###Tabs
@@ -84,7 +103,7 @@ gt (:tabnext or :tabn) | move to next tab | gT (:tabprev or :tabp) | move to pre
 Keys     | Description | Keys | Description   
 :--- | :--- | :--- | :--- | :---
 v | start visual mode | V  | start linewise visual mode
-Ctrl + v | start visual block mode | |
+^v | start visual block mode | |
 o | move to other end of marked area | O | move to other corner of block
 aw | mark a word | |
 ab | a block with () | aB | a block with {}
