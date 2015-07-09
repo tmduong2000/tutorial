@@ -94,10 +94,10 @@ Keys     | Description | Keys | Description
 ###Tabs
 Keys     | Description | Keys | Description   
 :--- | :--- | :--- | :--- | :---
-:tabnew fn (:tabn fn) | open a file in new tab | Ctrl + wT  | Move curr Split-win into its own Tab
-gt (:tabnext or :tabn) | move to next tab | gT (:tabprev or :tabp) | move to prev-tab
+:tabnew fn/:tabn fn | open a file in new tab | ^wT  | Move curr Split-win into its own Tab
+gt/:tabnext/:tabn | move to next tab | gT/:tabprev/:tabp | move to prev-tab
 #gt | move to tab number # | :tabmove # | move curr tab to #th position
-:tabclose (:tabc) | close curr tab and all its windows | :tabonly (:tabo) | clase all tabs except curr
+:tabclose/:tabc | close curr tab and all its windows | :tabonly/:tabo | clase all tabs except curr
 
 ###Marking text (visual mode)
 Keys     | Description | Keys | Description   
