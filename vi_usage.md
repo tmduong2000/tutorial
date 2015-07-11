@@ -95,9 +95,34 @@ Keys     | Description | Keys | Description
 Keys     | Description | Keys | Description   
 :--- | :--- | :--- | :--- | :---
 :tabnew fn/:tabn fn | open a file in new tab | ^wT  | Move curr Split-win into its own Tab
+:tabedit fn | edit specified file in a new tab | :tabfind fn | open a new tab with filename, searching the 'path to find it
 gt/:tabnext/:tabn | move to next tab | gT/:tabprev/:tabp | move to prev-tab
-#gt | move to tab number # | :tabmove # | move curr tab to #th position
-:tabclose/:tabc | close curr tab and all its windows | :tabonly/:tabo | clase all tabs except curr
+:tabfirst | goto first tab | :tablast | goto last tab
+^PgDn | goto next tab | ^PgUp | goto previous tab
+#gt | move to tab number # starting from 1 | :tabmove # | move curr tab to #th position
+:tabclose/:tabc {i} | close curr tab and all its windows | :tabonly/:tabo | clase all tabs except curr
+:tab ball | show each buffer in a tab (up to 'tabpagemax' tabs) | :tab help | open a new help widnow in its own tab page
+:tab drop {file} | open {file} in a new tab, or jump to a window/tab containing the file | :tab split | copy the curr window to a new tab of its own
+:sp fn | creates a new window in the current tab editing the specified file | ^WT | window can be moved to a new tab by pressing
+:tab sp | split the current window, but open the spit in a new tab
+```
+vim -p *.py
+:set path=.,,**
+
+set switchbuf=usetab
+nnoremap <F8> :sbnext<CR>
+nnoremap <S-F8> : sbprevious<CR>
+
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <A-Left> : execute 'silent! tabmove ' . <tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+
+let notabs = 0
+nnoremap <silent> <F8> :let notabs=!notabs<Bar>:if notabs<Bar>:tabo<Bar>:else<Bar>:tab ball<Bar>:tabn<Bar>:endif<CR>
+
+```
+
 
 ###Marking text (visual mode)
 Keys     | Description | Keys | Description   
