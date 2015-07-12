@@ -80,3 +80,14 @@ tput el | clear to end of line
 tput ed | clear to end of screen
 tput ich N | insert N chars (moves rest of line forward
 tput il N | insert N lines
+
+```bash
+NORM=$(tput sgr0)
+BOLD=$(tput bold)
+REV=$(tput smso)
+BLUE="$(tput setaf 4 ; tput bold)"
+
+echo -e "Example: ${BOLD} shellscript.sh -a${NORM} foo ${BOLD}-b${NORM} man ${BOLD}-c${NORM} chu ${BOLD}-d${NORM} bar file.ext${NORM}\\n"
+
+
+```
