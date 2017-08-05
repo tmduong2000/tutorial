@@ -1,1 +1,2 @@
 Sat Aug  5 09:36:42 EDT 2017 - Hello file1
+Sat Aug  5 09:42:56 EDT 2017 - add new line
