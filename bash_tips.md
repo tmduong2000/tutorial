@@ -15,14 +15,14 @@ OPTERR | (0\|1)
 ############################
 #!/bin/bash
 while getopts "fup:" opt; do
-	case $opt in
-		f)	flag = $opt
-			flag_valule = $OPTARG
-			;;
-		\?)
-			echo "Invalid option: -$OPTARGS" >&2
-			;;
-	esac
+    case $opt in
+        f)	flag = $opt
+            flag_valule = $OPTARG
+            ;;
+        \?)
+            echo "Invalid option: -$OPTARGS" >&2
+            ;;
+    esac
 done
 
 # This tells getops to move to the next argument.
