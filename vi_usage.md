@@ -1,6 +1,7 @@
 
 
-###Cursor Movement
+### Cursor Movement
+
 Keys     | Description | Keys | Description   
 :--- | :--- | :--- | :---
 h | Move left | l | Move right
@@ -21,7 +22,8 @@ M | middle of screen | |
 % | Move to associated (), {}, []
 
 
-###Scrolling
+### Scrolling
+
 Keys     | Description | Keys | Description   
 :--- | :--- | :--- | :---
 ^e | scroll down one line ("expose") | ^y | scroll up one line
@@ -31,7 +33,8 @@ zz | center cursor line in window
 zh | scroll left | zl | scroll right
 zt | scroll top | zb | scroll bottom
 
-###Insert Mode
+### Insert Mode
+
 Keys     | Description | Keys | Description   
 :--- | :--- | :--- | :---
 i | insert before cursor | a | insert (append) after cursor
@@ -39,7 +42,8 @@ I | insert at the beginning of line | A | insert (append) at the end of line
 o | open below curr line | O | open above curr line
 ea | insert (append) at the end of word | Esc | exit insert mode
 
-###Editing
+### Editing
+
 Keys     | Description | Keys | Description   
 :--- | :--- | :--- | :---
 r | replace a single char |  | 
@@ -50,7 +54,8 @@ s | delete char and substitue text | S | delete line and substitude text (same a
 xp | transpose two letters (delete and paste) | |
 u | undo | Ctrl + r | redo
 
-###Cut and Paste
+### Cut and Paste
+
 Keys     | Description | Keys | Description   
 :--- | :--- | :--- | :---
 yy | copy a line | nyy | copy n lines
@@ -60,14 +65,16 @@ dd | delete a lien | ndd | delete n lines
 dw | delete a word | D (d$) | delete to the end of line
 x | delete char | nx | delete n-char
 
-###Search and replace
+### Search and replace
+
 Keys     | Description | Keys | Description   
 :--- | :--- | :--- | :---
 /pattern | search for patter | ?pattern | search backward for pattern
 n | repeat search in the same direction | N | repeat search in opposite direction
 :%/old/new/g | replace all old with new throughout file | :%s/old/new/gc | replace all with confirmations
 
-###Working with multiple files
+### Working with multiple files
+
 Keys     | Description | Keys | Description   
 :--- | :--- | :--- | :---
 :e fname | edit a file in new buff |  | 
@@ -79,7 +86,8 @@ Keys     | Description | Keys | Description
 ^wh | move cursor to L-Win (V-Split) | ^wl | move cursor to R-W (V-Split)
 ^wj | move cursor to Win below (H-Split) | ^wk | move cursor to win above (H-Split)
 
-###MISC
+### MISC
+
 Keys     | Description | Keys | Description   
 :--- | :--- | :--- | :---
 :.= | display curr line | := | display total lines
@@ -91,7 +99,8 @@ Keys     | Description | Keys | Description
 :w>> otherF | append text to other File
 
 
-###Tabs
+### Tabs
+
 Keys     | Description | Keys | Description   
 :--- | :--- | :--- | :---
 :tabnew fn/:tabn fn | open a file in new tab | ^wT  | Move curr Split-win into its own Tab
@@ -105,6 +114,7 @@ gt/:tabnext/:tabn | move to next tab | gT/:tabprev/:tabp | move to prev-tab
 :tab drop {file} | open {file} in a new tab, or jump to a window/tab containing the file | :tab split | copy the curr window to a new tab of its own
 :sp fn | creates a new window in the current tab editing the specified file | ^WT | window can be moved to a new tab by pressing
 :tab sp | split the current window, but open the spit in a new tab
+
 ```
 vim -p *.py
 :set path=.,,**
@@ -124,7 +134,8 @@ nnoremap <silent> <F8> :let notabs=!notabs<Bar>:if notabs<Bar>:tabo<Bar>:else<Ba
 ```
 
 
-###Marking text (visual mode)
+### Marking text (visual mode)
+
 Keys     | Description | Keys | Description   
 :--- | :--- | :--- | :---
 v | start visual mode | V  | start linewise visual mode
@@ -136,7 +147,8 @@ ib | inner block with () | iB | inner block with {}
 Esc | exit visual mode | |
 
 
-###Visual commands
+#### Visual commands
+
 Keys     | Description | Keys | Description   
 :--- | :--- | :--- | :---
 \> | shift text right | <  | shift text left
