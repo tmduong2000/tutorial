@@ -2,7 +2,7 @@
 
 ###Cursor Movement
 Keys     | Description | Keys | Description   
-:--- | :--- | :--- | :--- | :---
+:--- | :--- | :--- | :---
 h | Move left | l | Move right
 j | Move down | k | Move up
 w | next word | b | the beginning of the word
@@ -23,7 +23,7 @@ M | middle of screen | |
 
 ###Scrolling
 Keys     | Description | Keys | Description   
-:--- | :--- | :--- | :--- | :---
+:--- | :--- | :--- | :---
 ^e | scroll down one line ("expose") | ^y | scroll up one line
 ^d | scroll down half screen | ^u | scroll down one screen
 ^f | scroll down one screen ("forward") | ^b | scroll up one screen
@@ -33,7 +33,7 @@ zt | scroll top | zb | scroll bottom
 
 ###Insert Mode
 Keys     | Description | Keys | Description   
-:--- | :--- | :--- | :--- | :---
+:--- | :--- | :--- | :---
 i | insert before cursor | a | insert (append) after cursor
 I | insert at the beginning of line | A | insert (append) at the end of line
 o | open below curr line | O | open above curr line
@@ -41,7 +41,7 @@ ea | insert (append) at the end of word | Esc | exit insert mode
 
 ###Editing
 Keys     | Description | Keys | Description   
-:--- | :--- | :--- | :--- | :---
+:--- | :--- | :--- | :---
 r | replace a single char |  | 
 J | join line below to the current one | |
 cc | change (replace) entire line | c$ | replace to the end of line
@@ -52,7 +52,7 @@ u | undo | Ctrl + r | redo
 
 ###Cut and Paste
 Keys     | Description | Keys | Description   
-:--- | :--- | :--- | :--- | :---
+:--- | :--- | :--- | :---
 yy | copy a line | nyy | copy n lines
 yw | copy a word | y$ | copy to end of line
 p | paste after cursor | P | paste before cursor
@@ -62,14 +62,14 @@ x | delete char | nx | delete n-char
 
 ###Search and replace
 Keys     | Description | Keys | Description   
-:--- | :--- | :--- | :--- | :---
+:--- | :--- | :--- | :---
 /pattern | search for patter | ?pattern | search backward for pattern
 n | repeat search in the same direction | N | repeat search in opposite direction
 :%/old/new/g | replace all old with new throughout file | :%s/old/new/gc | replace all with confirmations
 
 ###Working with multiple files
 Keys     | Description | Keys | Description   
-:--- | :--- | :--- | :--- | :---
+:--- | :--- | :--- | :---
 :e fname | edit a file in new buff |  | 
 :bnext (:bn) | go to next buff | :bprev (:bp) | go to prev buff
 :bd | delete a buffer (close a file) | :bd! | force close
@@ -81,7 +81,7 @@ Keys     | Description | Keys | Description
 
 ###MISC
 Keys     | Description | Keys | Description   
-:--- | :--- | :--- | :--- | :---
+:--- | :--- | :--- | :---
 :.= | display curr line | := | display total lines
 :!cmd | exec Unix cmd | r!cmd | insert output from Unix cmd into file after cursor
 :sh | startup a shell enter cmd
@@ -93,7 +93,7 @@ Keys     | Description | Keys | Description
 
 ###Tabs
 Keys     | Description | Keys | Description   
-:--- | :--- | :--- | :--- | :---
+:--- | :--- | :--- | :---
 :tabnew fn/:tabn fn | open a file in new tab | ^wT  | Move curr Split-win into its own Tab
 :tabedit fn | edit specified file in a new tab | :tabfind fn | open a new tab with filename, searching the 'path to find it
 gt/:tabnext/:tabn | move to next tab | gT/:tabprev/:tabp | move to prev-tab
@@ -126,7 +126,7 @@ nnoremap <silent> <F8> :let notabs=!notabs<Bar>:if notabs<Bar>:tabo<Bar>:else<Ba
 
 ###Marking text (visual mode)
 Keys     | Description | Keys | Description   
-:--- | :--- | :--- | :--- | :---
+:--- | :--- | :--- | :---
 v | start visual mode | V  | start linewise visual mode
 ^v | start visual block mode | |
 o | move to other end of marked area | O | move to other corner of block
@@ -138,6 +138,6 @@ Esc | exit visual mode | |
 
 ###Visual commands
 Keys     | Description | Keys | Description   
-:--- | :--- | :--- | :--- | :---
-> | shift text right | <  | shift text left
+:--- | :--- | :--- | :---
+\> | shift text right | <  | shift text left
 y | copy marked text | d | delete marked text
