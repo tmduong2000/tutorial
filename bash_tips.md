@@ -1,3 +1,66 @@
+### Variable
+
+<hr>
+
+### Test, [ -- condition valuation utility ]
+
+##### Synopsis
+```bash
+test expression
+[ expression ]
+[[ expression ]]
+
+The double bracket [[  construct, also known as 'extended test' or 'New Test' is more versatile, the old test [ is more portable.
+To do a simple numeric comparison, use (( )) instead of test
+```
+
+Operator | Description | Example
+--- | ---- | ---
+exit_code | &nbsp;&nbsp;0  --- expression evaluated to true.<br>&nbsp;&nbsp;1 --- expression evaluated to false or expression was missing.<br>>1 --- An error occurred|
+-b file | True if file exists and is a block special file. |
+-c file | True if file exists and is a character special file. |
+-d file | True if file exists and is a directory. |
+-e file | True if file exists (regardless of type). |
+-f file | True if file exists and is a regular file. |
+-g file | True if file exists and its set group ID flag is set. |
+-h file | True if file exists and is a symbolic link.|
+-k file | True if file exists and its sticky bit is set. |
+-p file | True if file is a name pipe (FIFO). |
+-r file | True if file exists and is readable. |
+-s file | True if file exists and has a size greater than zero.|
+-t fd | True if file descriptor is open and is associated with a terminal |
+-u file | True if file exists and its user ID flag is set. |
+-w file | True if file exists and is writable. |
+-x file | True if file exists and is executable. |
+-L file | True if file exists and is a symbolic link. |
+-O file | True if file exists and its owner matches the euid of this process. |
+-G file | True if file exists and its group matches and egid of this process. |
+-S file | True if file exists and is a socket. |
+fn1 -nt fn2 | True if file1 exists and newer than file2 |
+fn1 -ot fn2 | True if file1 exists and older than file2 |
+fn1 -ef fn2 | True if file1 and file2 and refer to the same file. |
+fn1 -nt fn2 | True if file1 exists and newer than file2 |
+-n string | True if the length of string is nonzero. |
+-z string | True if length of string is zero |
+string | True if string is not the null string. |
+s1 = s2 | True if string s1 and s2 are identical. |
+s1 != s2 | True if string s1 and s2 are not identical. |
+s1 < s2 | True if s1 comes before s2 based on the binary value of chars.|
+s2 > s2 | True if s1 comes after s2 based on the binary value of chars. |
+n1 -eq n2 | True if the integers n1 and n2 are equal. | a=9 && b="9" && [[ $a = $b ]] && echo "$a == $b" &#124;&#124; echo "$a != $b"
+n1 -ne n2 | True if the integers n1 and n2 are not equal. | a=9 && b="5" && [[ $a = $b ]] && echo "$a == $b" &#124;&#124; echo "$a != $b"
+n1 -gt n2 | True if the integer n1 is greater than n2. |
+n1 -ge n2 | True if the integer n1 is greater and equal n2. |
+n1 -lt n2 | True if the integer n1 is less than n2. |
+n1 -le n2 | True if the integer n1 is less and equal than n2. |
+! expression | True if expression is false. |
+e1 -a e2 | True if both exp1 and exp2 are true.<br>The -a operator has higher precedence than -o |
+e1 -o e2 | True if both exp1 or exp2 are true |
+( expr ) | True if expression is true. |
+e1 && e2 | True if both exp1 and exp2 are true |
+e1 &#124;&#124; e2 | True if both exp1 or exp2 are true |
+
+
 ### Getops Usage
 #### Used variables
 ```bash
@@ -7,7 +70,7 @@ variable | description
 --- | ---
 OPTIND | Holds the index to the next argument to be process
 OPTARG | will store value of flag
-OPTERR | (0\|1) 
+OPTERR | (0&#124;1) 
 
 ```bash
 ############################
